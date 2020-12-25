@@ -1,5 +1,23 @@
 import sortCharacters from '../app';
 
+test('ordered by health status #0. toBe', () => {
+  const characters = [
+    { name: 'мечник', health: 10 },
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+  ];
+
+  const data = [
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+    { name: 'мечник', health: 10 },
+  ];
+
+  const sorted = sortCharacters(characters);
+
+  expect(sorted).toBe(data);
+});
+
 test('ordered by health status #1. 3 different values', () => {
   const characters = [
     { name: 'мечник', health: 10 },
