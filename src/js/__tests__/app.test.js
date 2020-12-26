@@ -15,7 +15,7 @@ test('ordered by health status #0. toBe', () => {
 
   const sorted = sortCharacters(characters);
 
-  expect(sorted).toBe(data);
+  expect(sorted).not.toBe(data);
 });
 
 test('ordered by health status #1. 3 different values', () => {
